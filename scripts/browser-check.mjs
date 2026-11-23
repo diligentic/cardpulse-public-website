@@ -21,8 +21,8 @@ try {
   assert.equal(await demo.getByRole('tab', { selected: true }).textContent(), '03Keep the context');
   await demo.locator('#demo-tab-3').click();
   assert.ok(await page.getByText('You review and send. Always.').isVisible());
-  await page.locator('summary').filter({ hasText: 'Does CardPulse send emails automatically?' }).click();
-  assert.ok(await page.getByText('No. CardPulse creates personalized follow-up drafts.', { exact: false }).isVisible());
+  await page.locator('summary').filter({ hasText: 'Does Dovvy send emails automatically?' }).click();
+  assert.ok(await page.getByText('No. Dovvy creates personalized follow-up drafts.', { exact: false }).isVisible());
   console.log('PASS demo keyboard navigation, editable fields, draft stage, FAQ, campaign attribution');
   for (const width of [1440, 1024, 768, 390, 320]) {
     await page.setViewportSize({ width, height: 900 });
