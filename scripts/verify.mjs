@@ -18,7 +18,7 @@ for (const route of routes) {
   assert.ok(!html.includes('serviceWorker.register'), `${route}: no marketing service worker`);
   console.log(`PASS ${route}`);
 }
-for (const route of ['/robots.txt', '/sitemap.xml', '/opengraph-image', '/favicon.ico', '/branding/dovvy-logo.png', '/branding/favicon-32.png']) {
+for (const route of ['/robots.txt', '/sitemap.xml', '/opengraph-image', '/favicon.ico', '/branding/dovvy-logo-28f7b248ec.png', '/branding/favicon-32.png']) {
   assert.equal((await fetch(`${origin}${route}`)).status, 200, route);
   console.log(`PASS ${route}`);
 }

@@ -2,9 +2,9 @@ import sharp from 'sharp';
 import { writeFile } from 'node:fs/promises';
 
 // Optimize the transparent extractions without changing their aspect ratios.
-const logo = await sharp('public/branding/dovvy-logo.png').trim().png().toBuffer();
+const logo = await sharp('public/branding/dovvy-logo-28f7b248ec.png').trim().png().toBuffer();
 const mark = await sharp('public/branding/dovvy-favicon.png').trim().png().toBuffer();
-await sharp(logo).resize({ width: 1600, withoutEnlargement: true }).png({ compressionLevel: 9 }).toFile('public/branding/dovvy-logo.png');
+await sharp(logo).resize({ width: 1600, withoutEnlargement: true }).png({ compressionLevel: 9 }).toFile('public/branding/dovvy-logo-28f7b248ec.png');
 await sharp(mark).resize(512, 512, { fit: 'contain', background: '#00000000' }).png({ compressionLevel: 9 }).toFile('public/branding/dovvy-favicon.png');
 const sizes = [16, 32, 48];
 const icons = await Promise.all(sizes.map(size => sharp(mark).resize(size, size, { fit: 'contain', background: '#00000000' }).png().toBuffer()));

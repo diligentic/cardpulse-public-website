@@ -7,7 +7,7 @@ import { usePathname } from 'next/navigation';
 import { ArrowRight, Check, Menu, X, ScanLine, Mail, ShieldCheck, Contact, Layers, Download, Monitor, ChevronRight } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 
-export function BrandImage({ className = '', priority = false }: { className?: string; priority?: boolean }) { return <Image src="/branding/dovvy-logo.png" alt="Dovvy" width={1600} height={533} className={`brand-image ${className}`} priority={priority} sizes="(max-width: 640px) 120px, 150px" />; }
+export function BrandImage({ className = '', priority = false }: { className?: string; priority?: boolean }) { return <Image src="/branding/dovvy-logo-28f7b248ec.png" alt="Dovvy" width={1600} height={616} className={`brand-image ${className}`} priority={priority} sizes="(max-width: 640px) 120px, 150px" />; }
 export function Logo() { return <Link href="/" aria-label="Dovvy home" className="logo"><BrandImage priority /></Link>; }
 export function SignupLink({ children = 'Start Free', tier = 'free', className = 'button primary' }: { children?: React.ReactNode; tier?: 'free' | 'monthly'; className?: string }) {
   const [href, setHref] = useState(`https://card-scanner-pulse.netlify.app/signup?plan=${tier}`);
