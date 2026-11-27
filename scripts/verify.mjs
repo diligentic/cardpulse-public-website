@@ -13,8 +13,8 @@ for (const route of routes) {
   titles.add(title);
   assert.ok(html.includes(`https://cardpulse.com${route === '/' ? '' : route}`), `${route}: canonical`);
   assert.ok(html.includes('id="main"'), `${route}: main landmark`);
-  assert.ok(html.includes('https://card-scanner-pulse.netlify.app/'), `${route}: app install destination`);
-  assert.ok(!html.includes('https://card-scanner-pulse.netlify.app/install'), `${route}: no nonexistent install route`);
+  assert.ok(html.includes('href="https://card-scanner-pulse.netlify.app/install"'), `${route}: app install destination`);
+  assert.ok(!html.includes('href="https://card-scanner-pulse.netlify.app/"'), `${route}: install links must use /install`);
   assert.ok(!html.includes('serviceWorker.register'), `${route}: no marketing service worker`);
   console.log(`PASS ${route}`);
 }
