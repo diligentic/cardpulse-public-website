@@ -1,6 +1,6 @@
 # CardPulse public website
 
-Next.js App Router, TypeScript, Framer Motion, and Lucide. This repository is the marketing site only; the product and installable PWA remain at `card-scanner-pulse.netlify.app`.
+Next.js App Router, TypeScript, Framer Motion, and Lucide. This repository is the marketing site only; the product and installable PWA remain at `app.dovvy.ca`.
 
 ## Run locally
 

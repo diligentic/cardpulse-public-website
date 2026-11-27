@@ -3,7 +3,7 @@ import { Header, Footer } from '@/components/site';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://cardpulse.com'),
+  metadataBase: new URL('https://dovvy.ca'),
   title: { default: 'Dovvy — Turn connections into conversations', template: '%s | Dovvy' },
   description: 'Scan business cards, review contact details, and create personal follow-up drafts with Dovvy. Built for your next conversation.',
   icons: {
